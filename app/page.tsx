@@ -1,12 +1,9 @@
-import { Apple } from "lucide-react";
+import BannerSlider from "@/components/BannerSlider";
+import ComboMeal from "@/components/MainPage/ComboMeal";
 
 export default function Page() {
-  return (
-    <>
-      <p>Welcome to the food app!</p>
-
-      {/* Demo long content */}
-      <div className="h-[2000px]" />
-    </>
-  );
+  return <div>
+    <BannerSlider />
+    <ComboMeal/>
+  </div>;
 }

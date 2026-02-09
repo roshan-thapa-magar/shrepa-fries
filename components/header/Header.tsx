@@ -8,8 +8,11 @@ import UserAvatar from "./UserAvatar"
 import Notifications from "./Notifications"
 import ShoppingBagIcon from "./Bag"
 import MobileMenu from "./MobileMenu"
+import { useRouter } from "next/navigation"
 
 const Header = () => {
+    const router = useRouter()
+
   return (
     <header className="w-full shadow-sm">
       {/* <div className="px-4 py-2 text-center underline md:hidden bg-green-500">
@@ -21,7 +24,7 @@ const Header = () => {
           <div className="md:hidden flex items-center">
             <MobileMenu />
           </div>
-          <h1 className="text-2xl md:text-3xl font-extrabold m-0">
+          <h1 onClick={() => router.push("/")} className="text-2xl md:text-3xl font-extrabold m-0">
             NOVA
           </h1>
         </div>

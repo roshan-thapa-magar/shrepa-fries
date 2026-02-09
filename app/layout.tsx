@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import Header from "@/components/header/Header";
+import ScrollingMessages from "@/components/ScrollingMessages";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -40,6 +41,16 @@ export default function RootLayout({
             {/* Header (fixed, no scroll) */}
             <div className="shrink-0 shadow-md dark:shadow-white/10">
               <Header />
+              <ScrollingMessages
+                messages={[
+                  "Restaurant is closed. Nova Delivers will reopen at 5:00 pm",
+                  "New menu available tomorrow!",
+                  "Free delivery on orders over $50",
+                ]}
+                duration={20} // optional, seconds per message
+              />
+
+
             </div>
 
             {/* Page content (scrollable) */}

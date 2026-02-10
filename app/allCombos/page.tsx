@@ -1,8 +1,6 @@
-// ComboMeal.js
-'use client'
-import React from 'react';
-import { useRouter } from "next/navigation";
-import ComboItem from '../ComboItem'; // Import the ComboItem component
+import ComboItem from '@/components/ComboItem';
+import React from 'react'
+import { Loader } from 'lucide-react';
 
 const items = [
   {
@@ -46,38 +44,41 @@ const items = [
     title: "Mixed Combo Meal ( 6-8 People )",
     description: "Chicken Wings, Fries, Veg Pulao, Veg Spring Rolls...",
     price: "2999",
-  },{
+  },
+  {
     id: 7,
-    image: "/food/image1.png",
-    title: "Current Noodles & Non-Veg Combo ( 8-10 People )",
-    description: "Chicken 65 Biryani X2, Crispy Chicken Burger, Buffalo Chicken Wings (6Pcs.)...",
-    price: "3999",
+    image: "https://www.recipetineats.com/tachyon/2023/12/Seafood-Platter_Sony-5.jpg",
+    title: "Family Combo ( 10-12 People )",
+    description: "Chicken Tikka, Mutton Biryani, Samosas (12 pcs), Soft Drinks...",
+    price: "6999",
   },
   {
     id: 8,
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyl5jrFc3LzhI0kHV3SQm5E-FfWIOTW4KReA&s",
-    title: "Veg Combo Meal ( 4-6 People )",
-    description: "Vegetable Biryani X2, Paneer Tikka, Garlic Bread Sticks...",
-    price: "2499",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKqTeD4KEZ_ahv2l9C1QCzCwHAPaQA95g4yA&s",
+    title: "Vegetarian Feast Combo ( 8-10 People )",
+    description: "Paneer Butter Masala, Dal Makhani, Naan, Raita...",
+    price: "3599",
+  },
+  {
+    id: 9,
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShCqHH38CajH9gdcosD9hZHslFUZOduck3Lg&s",
+    title: "Mixed Combo Meal ( 6-8 People )",
+    description: "Chicken Wings, Fries, Veg Pulao, Veg Spring Rolls...",
+    price: "2999",
   }
 ];
-
-export default function ComboMeal() {
-  const router = useRouter();
-
+export default function page() {
   return (
     <div>
-      <div className="flex justify-between items-center py-4">
-        <span className="text-2xl font-extrabold">Combo Meals</span>
-        <p className="font-extrabold text-blue-600 cursor-pointer" onClick={() => router.push("/allCombos")}>
-          See all
-        </p>
+      <div className='flex justify-between items-center pb-4'>
+        <span className="text-xl font-extrabold">Combo Meals</span>
+         <Loader className="animate-spin text-blue-500" size={40} />
       </div>
-      <div className="flex overflow-x-auto hide-scrollbar space-x-4 py-2">
-        {items.map((item) => (
-          <ComboItem key={item.id} item={item} className="w-full sm:w-1/2 md:w-1/3 lg:w-[23%]"/>  
-        ))}
-      </div>
+     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+             {items.map((item) => (
+               <ComboItem key={item.id} item={item} className="w-full"/>  
+             ))}
+           </div>
     </div>
-  );
+  )
 }

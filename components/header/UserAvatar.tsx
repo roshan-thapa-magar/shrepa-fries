@@ -1,3 +1,4 @@
+"use client"
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -5,8 +6,11 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import { useRouter } from "next/navigation"
 
 const UserAvatar = () => {
+      const router = useRouter()
+
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
@@ -17,7 +21,7 @@ const UserAvatar = () => {
       </DropdownMenuTrigger>
 
       <DropdownMenuContent align="end" className="w-40">
-        <DropdownMenuItem>View Profile</DropdownMenuItem>
+        <DropdownMenuItem onClick={()=>router.push("/myAccount")}>View Profile</DropdownMenuItem>
         <DropdownMenuItem className="text-red-500">
           Logout
         </DropdownMenuItem>

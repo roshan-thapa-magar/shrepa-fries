@@ -24,7 +24,7 @@ const Header = () => {
           <div className="md:hidden flex items-center">
             <MobileMenu />
           </div>
-          <h1 onClick={() => router.push("/")} className="text-2xl md:text-3xl font-extrabold m-0">
+          <h1 onClick={() => router.push("/")} className="text-2xl md:text-3xl font-extrabold m-0 cursor-pointer">
             NOVA
           </h1>
         </div>
@@ -32,7 +32,7 @@ const Header = () => {
         {/* Center / Right: Search + Icons */}
         <div className="flex items-center gap-4 md:gap-6 ">
           <SearchBar />
-          <div className="flex items-center gap-2 hidden md:flex">
+          <div className="flex items-center gap-2 hidden md:flex cursor-pointer">
             {/* Phone Icon */}
             <Phone className="w-6 h-6 text-foreground flex-shrink-0" />
 
@@ -48,7 +48,7 @@ const Header = () => {
           {/* <ThemeToggle /> */}
 
           <div className="hidden md:flex items-center gap-6">
-            <MousePointer2 className="w-5 h-5 cursor-pointer" />
+            <MousePointer2 onClick={()=> router.push("/allOffers")} className="w-5 h-5 cursor-pointer" />
 
           </div>
           {/* Always visible */}

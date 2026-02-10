@@ -3,9 +3,9 @@ const nextConfig = {
   images: {
     remotePatterns: [
       {
-        protocol: "https",
-        hostname: "t3.ftcdn.net",
-        pathname: "/**",
+        protocol: "https",      // Allows images with HTTPS protocol
+        hostname: "**",         // Accepts images from any hostname
+        pathname: "/**",        // Accepts images from any path
       },
     ],
   },

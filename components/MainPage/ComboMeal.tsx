@@ -75,7 +75,7 @@ export default function ComboMeal() {
       </div>
       <div className="flex overflow-x-auto hide-scrollbar space-x-4 py-2">
         {items.map((item) => (
-          <ComboItem key={item.id} item={item} className="w-full sm:w-1/2 md:w-1/3 lg:w-[23%]"/>  
+          <ComboItem key={item.id} item={item} className="w-[80%] sm:w-1/2 md:w-1/3 lg:w-[23%]"/>  
         ))}
       </div>
     </div>

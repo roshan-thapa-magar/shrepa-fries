@@ -2,7 +2,7 @@
 
 import { Input } from "../ui/input"
 import { Search, MousePointer2, Phone } from "lucide-react"
-// import { ThemeToggle } from "@/components/theme-toggle"
+import { ThemeToggle } from "@/components/theme-toggle"
 import SearchBar from "./SearchBar"
 import UserAvatar from "./UserAvatar"
 import Notifications from "./Notifications"
@@ -45,7 +45,7 @@ const Header = () => {
 
 
           {/* Optional ThemeToggle */}
-          {/* <ThemeToggle /> */}
+          <ThemeToggle />
 
           <div className="hidden md:flex items-center gap-6">
             <MousePointer2 onClick={()=> router.push("/allOffers")} className="w-5 h-5 cursor-pointer" />

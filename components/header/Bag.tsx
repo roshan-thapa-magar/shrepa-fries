@@ -52,7 +52,7 @@ const Bag = () => {
         
         {/* Scrollable Items Container */}
         <div className="flex-1 overflow-y-auto">
-          <div className="flex flex-col px-4 py-4">
+          <div className="flex flex-col px-4">
             {/* Item Card */}
             <div className="border-b pb-4 mb-4">
               <div className="flex flex-row gap-3 sm:gap-4">

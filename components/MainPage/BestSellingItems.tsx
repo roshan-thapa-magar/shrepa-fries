@@ -71,7 +71,7 @@ export default function BestSellingItems() {
           See all
         </p>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <div className="grid custom-grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
               {items.map((item) => (
                 <ComboItem key={item.id} item={item} className="w-full"/>  
               ))}

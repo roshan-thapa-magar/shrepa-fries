@@ -63,13 +63,13 @@ export default function page() {
     <div>
       <div className='flex justify-between items-center pb-4'>
         <span className="text-xl font-extrabold">Best Selling Items</span>
-         <Loader className="animate-spin text-blue-500" size={40} />
+        <Loader className="animate-spin text-blue-500" size={40} />
       </div>
-     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-             {items.map((item) => (
-               <ComboItem key={item.id} item={item} className="w-full" />  
-             ))}
-           </div>
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        {items.map((item) => (
+          <ComboItem key={item.id} item={item} className="w-full" />
+        ))}
+      </div>
     </div>
   )
 }

@@ -17,8 +17,8 @@ export default function ComboItem({ item, className }) {
         />
       </div>
       <div className="p-4">
-        <span className="font-bold text-base block">{item.title}</span>
-        <p className="text-xs text-gray-600">{item.description}</p>
+        <span className="font-bold text-base block truncate-text ">{item.title}</span>
+        <p className="text-xs text-gray-600 instruction-text">{item.description}</p>
         <span className="font-extrabold  block text-lg">RS. {item.price}</span>
       </div>
     </div>

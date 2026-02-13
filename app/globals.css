@@ -148,6 +148,20 @@
   scrollbar-width: none; /* Firefox */
 }
 
+.truncate-text {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  max-width: 300px; /* adjust as needed */
+}
+
+.instruction-text {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  max-width: 500px; /* adjust as needed */
+}
+
 @media (max-width: 350px) {
   .custom-grid {
   grid-template-columns: repeat(1, minmax(0, 1fr)) !important;

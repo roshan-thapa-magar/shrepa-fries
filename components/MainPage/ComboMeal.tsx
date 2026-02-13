@@ -73,7 +73,7 @@ export default function ComboMeal() {
           See all
         </p>
       </div>
-      <div className="flex overflow-x-auto hide-scrollbar space-x-4 py-2">
+      <div className="flex overflow-x-auto hide-scrollbar space-x-2 md:space-x-4 py-2">
         {items.map((item) => (
           <ComboItem key={item.id} item={item} className="truncate-text w-[80%] sm:w-1/2 md:w-1/3 lg:w-[23%]"/>  
         ))}

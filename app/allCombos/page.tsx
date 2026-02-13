@@ -74,7 +74,7 @@ export default function page() {
         <span className="text-xl font-extrabold">Combo Meals</span>
          <Loader className="animate-spin text-blue-500" size={40} />
       </div>
-     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+     <div className="grid custom-grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
              {items.map((item) => (
                <ComboItem key={item.id} item={item} className="w-full"/>  
              ))}

@@ -65,7 +65,7 @@ export default function page() {
         <span className="text-xl font-extrabold">Best Selling Items</span>
         <Loader className="animate-spin text-blue-500" size={40} />
       </div>
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <div className="grid custom-grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 md:gap-4">
         {items.map((item) => (
           <ComboItem key={item.id} item={item} className="w-full" />
         ))}
